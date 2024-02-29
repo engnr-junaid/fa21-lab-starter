@@ -13,11 +13,22 @@ int main(int argc, char **argv) {
 
     int num_z = num_occurrences(str, 'z');
     assert(num_z == 0);
-
+    
     /* TODO: Think of a scenario that is not tested by the current test cases. Create one additional test case to test this scenario. */
 
     printf("Congrats! If you have made it to this line, your Part 1 Test cases are all passing!\n");
+    
+    
+    printf("...Running your test case... \n\n");
+    char *my_str = "hi this is my test string";
 
+    int num_i = num_occurrences(my_str, 'i');
+    assert(num_i == 4);
+
+    int num_t = num_occurrences(my_str, 't');
+    assert(num_t == 4);
+    
+    printf("Your test case also Passed !!! \n\n Congratulaions !!!!!\n\n");
     /************ Part 2 Test Cases ************/
     DNA_sequence dna_seq_1;
     strcpy(dna_seq_1.sequence, "ACTTTGAAC");
@@ -38,6 +49,18 @@ int main(int argc, char **argv) {
     /* TODO: Think of a scenario that is not tested by the current test cases. Create one additional test case to test this scenario. */
 
     printf("Congrats! If you have made it to this line, your Part 2 Test cases are all passing!\n");
-
+   
+    printf("...Running your test case... \n\n");
+   
+    DNA_sequence dna_seq_3;
+    strcpy(dna_seq_2.sequence, "AAAACCCGGGTTTTT");
+    compute_nucleotide_occurrences(&dna_seq_2);
+    assert(dna_seq_2.A_count == 4);
+    assert(dna_seq_2.C_count == 3);
+    assert(dna_seq_2.G_count == 3);
+    assert(dna_seq_2.T_count == 5);
+   
+    printf("Your test case also Passed !!! \n\n Congratulaions !!!!!\n\n");
+ 
     return 0;
 }
